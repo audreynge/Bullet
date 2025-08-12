@@ -15,7 +15,7 @@ export default function Navbar () {
         <h1 className='text-xl font-bold'>Bullet</h1>
         <ul className='flex text-sm items-center gap-10'>
           {navLinks.map((link) => (
-            <li key={link.name}>
+            <li key={link.name} className='hover:underline'>
               <NavLink to={link.path}>{link.name}</NavLink>
             </li>
           ))}
