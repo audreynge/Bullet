@@ -1,22 +1,26 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Goals from './pages/Goals';
+import Groups from './pages/Groups';
+import { GoalProvider } from './context/GoalContext';
+import { UserProvider } from './context/UserContext';
 
-
-function App() {
-
+export default function App() {
   return (
     <main>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/goals" element={<Goals />} />
-        </Routes>
-      </BrowserRouter>
+      <UserProvider>
+        <GoalProvider>
+          <BrowserRouter>
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/goals" element={<Goals />} />
+              <Route path="/groups" element={<Groups />} />
+            </Routes>
+          </BrowserRouter>
+        </GoalProvider>
+      </UserProvider>
     </main>
-  )
+  );
 }
-
-export default App
