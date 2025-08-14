@@ -7,17 +7,17 @@ export const getGoalsByUser = async (userId) => {
   return response.data;
 }
 
-export const createGoal = async (task) => {
-  const response = await axios.post(`${BACKEND_URL}/goals`, task);
+export const createGoal = async (goal) => {
+  const response = await axios.post(`${BACKEND_URL}/goals`, goal);
   return response.data;
 }
 
-export const updateGoal = async (taskId, task) => {
-  const response = await axios.put(`${BACKEND_URL}/goals/${taskId}`, task);
+export const updateGoal = async (goalId, goal) => {
+  const response = await axios.put(`${BACKEND_URL}/goals/${goalId}`, goal);
   return response.data;
 }
 
-export const deleteGoal = async (taskId) => {
-  const response = await axios.delete(`${BACKEND_URL}/goals/${taskId}`);
+export const deleteGoal = async (goalId) => {
+  const response = await axios.delete(`${BACKEND_URL}/goals/${goalId}`);
   return response.data;
 }
