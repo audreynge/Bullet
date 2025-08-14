@@ -4,7 +4,6 @@ const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'My Goals', path: '/goals' },
   { name: 'Groups', path: '/groups' },
-  { name: 'Leaderboard', path: '/leaderboard' },
   { name: 'Profile', path: '/profile' },
 ];
 
