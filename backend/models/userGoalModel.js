@@ -1,4 +1,4 @@
-import pool from 'pg';
+import pool from '../db.js';
 
 export const getUserGoals = async (userId) => {
   try {

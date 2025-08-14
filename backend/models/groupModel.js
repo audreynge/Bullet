@@ -1,4 +1,4 @@
-import pool from 'pg';
+import pool from '../db.js';
 
 export const getGroups = async () => {
   try {

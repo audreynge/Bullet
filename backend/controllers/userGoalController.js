@@ -1,4 +1,4 @@
-import * as UserGoal from '../model/userGoalModel.js';
+import * as UserGoal from '../models/userGoalModel.js';
 
 export const listUserGoals = async (req, res) => {
   try {

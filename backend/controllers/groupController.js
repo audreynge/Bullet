@@ -1,4 +1,4 @@
-import * as Group from '../model/groupModel.js';
+import * as Group from '../models/groupModel.js';
 
 export const listGroups = async () => {
   try {
