@@ -7,7 +7,7 @@ import pool from '../db.js';
 export const getGoals = async () => {
     try {
         const response = await pool.query('SELECT * FROM goals');
-        return response.data;
+        return response.rows;
     } catch (error) {
         console.error(error);
     }

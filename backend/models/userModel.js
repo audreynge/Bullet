@@ -3,7 +3,7 @@ import pool from '../db.js';
 export const getUsers = async () => {
   try {
     const response = await pool.query('SELECT * FROM users');
-    return response.data;
+    return response.rows;
   } catch (error) {
     console.error(error);
   }
@@ -12,7 +12,7 @@ export const getUsers = async () => {
 export const getUser = async (id) => {
   try {
     const response = await pool.query('SELECT * FROM users WHERE id = $1', [id]);
-    return response.data;
+    return response.rows[0];
   } catch (error) {
     console.error(error);
   }
